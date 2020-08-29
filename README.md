@@ -6,11 +6,13 @@ stating whether the images compared are both same or not.
 Input is provided in the form of a CSV file.
 The format of a CSV file is shown below.
 
+'''
 image1 image2
 aa.png ba.png 
 ab.png bb.png 
 ac.png ac.gif 
 ad.png bd.png
+'''
 
 The output file should also be in a CSV format. 
 Example:-
