@@ -47,8 +47,12 @@ class imageComparison():
         :return:
         """
         for i in range(2,len(image_list),2):
-            image_one = Image.open(image_list[i])
-            image_two = Image.open(image_list[i+1])
+            try:
+                image_one = Image.open(image_list[i])
+                image_two = Image.open(image_list[i+1])
+            except:
+                print ("Check if the images are present in the path provided")
+                exit()
             if (image_one.format != image_two.format):
                 image_one,image_two = self.convertImageformat(image_one, image_two)
             image_one = image_one.resize((600, 600))
