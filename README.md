@@ -32,6 +32,11 @@ The fourth column elapsed states the time the program has taken to
 compare all the images present in each row of the CSV file.
 
 ### Usage
+This program used python Pillow library for image comparisons.
+Run the below command to install the library.
+```
+pip install Pillow
+```
 One need to provide input file as an argument, and also the name of the output file
 should be passed as an argument.
 
