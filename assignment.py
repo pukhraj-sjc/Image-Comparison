@@ -1,4 +1,18 @@
 #!/usr/bin/python
+"""
+Owner: Pukhraj Singh Contact: pukhraj.sjc@gmail.com
+
+Description: This program compares two images, input
+and output is in the form of a CSV file.
+
+Command to run:- python assignment.py -h
+usage: assignment.py [-h] [-i    INPUTFILE] [-o    OUTPUTFILE]
+
+optional arguments:
+  -h, --help        show this help message and exit
+  -i    INPUTFILE   Input CSV file
+  -o    OUTPUTFILE  Output CSV file
+"""
 # Standard Modules
 import csv
 import math, operator
