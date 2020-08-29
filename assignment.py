@@ -40,14 +40,13 @@ class imageComparison():
                 image_list.append(row[1])
             self.compareImages(image_list)
 
-
     def compareImages(self,image_list):
         """
         Function comparing the images
         :param image_list:
         :return:
         """
-        for i in range(0,len(image_list),2):
+        for i in range(2,len(image_list),2):
             image_one = Image.open(image_list[i])
             image_two = Image.open(image_list[i+1])
             if (image_one.format != image_two.format):
@@ -71,7 +70,7 @@ class imageComparison():
         :return:
         """
         h = diff.histogram()
-        return str((math.sqrt(reduce(operator.add, map(lambda h, i: h * (i ** 2), h, range(256))) / (
+        return str("{:.4f}".format(math.sqrt(reduce(operator.add, map(lambda h, i: h * (i ** 2), h, range(256))) / (
             float(image_one.size[0]) * image_two.size[1]))))
 
     def timeElapsed(self):
@@ -81,7 +80,7 @@ class imageComparison():
         """
         stop = time.process_time()
         time_diff = stop - self.currenttime
-        return str(time_diff)
+        return str("{:.4f}".format(time_diff))
 
     def createCSVfile(self,outputfile):
         """
